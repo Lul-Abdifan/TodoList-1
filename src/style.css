@@ -1,7 +1,68 @@
-.hope{
-  color:green;
-  background-color: rebeccapurple;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-  body {
-    background-color: bisque;
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f2f5;
+  width: 100%;
+}
+
+.list-container {
+  width: 40%;
+  box-shadow: 0 1px 4px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+  padding: 8px 12px;
+}
+
+.heading {
+  font-size: 24px;
+}
+
+.addItems {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 8px 12px;
+}
+
+.to-do {
+  font-size: 18px;
+  font-style: italic;
+  border: none;
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+
+.addTask {
+  background-color: #fff;
+  border: none;
+}
+
+.list {
+  padding: 8px 12px;
+}
+
+.clearTask {
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 18px;
 }

@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- https://cdnjs.com/libraries/font-awesome -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/LATEST-VERSION">
     <title>Todo list</title>
 </head>
 <body>
-    <h1 class="hope">Hello webpack!</h1>
+    <div class="list-container">
+        <header>
+          <h1 class="heading">Today's To Do</h1>
+          <i class="fa-solid fa-rotate"></i>
+        </header>
+        <form action="" class="addItems">
+          <input type="text" name="task" class="to-do" placeholder="Add to your list...">
+          <button type="submit" class="addTask">
+            <i class="fa-solid fa-arrow-turn-down"></i>
+          </button>
+        </form>
+        <div class="list-item">
+         
+        </div>
+        <button type="submit" class="clearTask">Clear all completed</button>
+      </div>
+    
 </body>
 </html>
