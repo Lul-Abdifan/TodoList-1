@@ -1,8 +1,5 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
-
-//                          
-
 
 const list = document.querySelector('.list-item');
 
@@ -43,7 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
   tasks.sort((a, b) => a.index - b.index)
     .map((item) => render(item));
 });
-
-
-
-

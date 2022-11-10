@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -15,19 +16,16 @@ body {
 }
 
 .list-container {
- 
   width: 40%;
   box-shadow: 0 1px 4px;
   border-radius: 10px;
   background-color: #fff;
-  
 }
 
 header {
   display: flex;
   justify-content: space-between;
   width: 100%;
- 
   border-bottom: 1px solid gainsboro;
   padding: 8px 12px;
 }
@@ -35,7 +33,6 @@ header {
 .heading {
   font-size: 24px;
 }
-
 
 .addItems {
   display: flex;
