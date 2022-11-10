@@ -36,10 +36,6 @@ header {
   font-size: 24px;
 }
 
-.fa-rotate {
-  font-size: 20px;
-  color: green;
-}
 
 .addItems {
   display: flex;
@@ -63,10 +59,6 @@ header {
   border: none;
 }
 
-.fa-arrow-turn-down {
-  transform: rotate(90deg);
-
-}
 .list {
   padding: 8px 12px;
 }
