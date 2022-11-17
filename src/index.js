@@ -1,9 +1,9 @@
 // import _ from 'lodash';
 import { constant, set } from 'lodash';
-// import './style.css';
-// import {lists,addItems,inputValue} from './modules/variables.js'
-// import Todo from './modules/Todo.js'
-// import {tasks} from './modules/Todo.js'
+import './style.css';
+import {lists,addItems,inputValue} from './modules/variables.js'
+import Todo from './modules/Todo.js'
+import {tasks} from './modules/Todo.js'
 // import {deleteToDo,editTodo} from './modules/crud.js'
 
 
