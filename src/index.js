@@ -18,7 +18,7 @@ addItems.addEventListener('submit',function(e)
 
  Todo.saveTodo();
  renderToDo();
- localStorage.setItem('tasks',JSON.stringify(tasks));
+//  localStorage.setItem('tasks',JSON.stringify(tasks));
 
          
 
@@ -91,7 +91,7 @@ action ==='delete' && deleteToDo(targetId);
   console.log(tasks);
 tasks.splice(targetId,1)
 console.log(tasks);
-   localStorage.setItem('tasks',JSON.stringify(tasks));
+  //  localStorage.setItem('tasks',JSON.stringify(tasks));
    renderToDo();
   
 //     console.log("delete",targetId)
