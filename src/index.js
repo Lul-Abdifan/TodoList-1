@@ -47,7 +47,7 @@ static saveTodo =()=>
     checked:false
   }
 tasks.push(task);
-inputValue.value =''
+// inputValue.value ='';
  
 
 }
