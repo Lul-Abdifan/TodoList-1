@@ -16,20 +16,20 @@ addItems.addEventListener('submit',function(e)
   localStorage.setItem('tasks',JSON.stringify(tasks));
 })
 lists.onclick=(e)=>
-// {  const { target } = e;
-// const parentEle = target.parentNode;
-// const item = parentEle;
-// if (parentEle.className !== 'item') return;
-// const targetId = Number(item.id);
-//  const action =target.dataset.action;
-// console.log("id",targetId)
+{  const { target } = e;
+const parentEle = target.parentNode;
+const item = parentEle;
+if (parentEle.className !== 'item') return;
+const targetId = Number(item.id);
+ const action =target.dataset.action;
+console.log("id",targetId)
 
-// action ==='delete' &&  deleteToDo(targetId-1);
-// action ==='edit' && editTodo(targetId-1);
+action ==='delete' &&  deleteToDo(targetId);
+action ==='edit' && editTodo(targetId);
 
 
-// }
-export function deleteToDo (targetId)
+}
+function deleteToDo (targetId)
   {
 tasks.splice(targetId,1)
 tasks.forEach((todo, index) => {
@@ -39,7 +39,7 @@ tasks.forEach((todo, index) => {
   Todo.renderToDo();
 
   }
-  export function editTodo(targetId)
+function editTodo(targetId)
   {
     console.log("edit button toucheed")
     inputValue.value=tasks[targetId].description;
