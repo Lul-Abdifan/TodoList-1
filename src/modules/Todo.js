@@ -26,12 +26,12 @@ static renderToDo() {
    
     <p data-action='edit'id="description">${task.description}</p>
   
-    <i class="bi bi-pencil-square" data-action='edit'></i>
+    <i class="bi bi-pencil-square edit-button" data-action='edit'></i>
     <i class="bi bi-trash-fill " data-action='delete'></i>
+   
     </div>
     `;
   });
 }
 }
-// const todo =new Todo(inputValue,false,0);
 export { tasks };
