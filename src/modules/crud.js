@@ -1,5 +1,5 @@
 import Todo, { tasks } from './Todo.js';
-import { inputValue} from './variables.js';
+import { inputValue } from './variables.js';
 
 function deleteToDo(targetId) {
   tasks.splice(targetId, 1);
