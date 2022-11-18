@@ -11,7 +11,7 @@ export default class Todo {
 static saveTodo =() => {
   const task = {
     description: inputValue.value,
-    index: tasks.length,
+    index: tasks.length + 1,
     checked: false,
   };
   tasks.push(task);
