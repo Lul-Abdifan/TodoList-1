@@ -1,42 +1,26 @@
 // import _ from 'lodash';
+// import { constant, set } from 'lodash';
 import './style.css';
+import { addItems, lists } from './modules/variables.js';
+import Todo, { tasks } from './modules/Todo.js';
+import { deleteToDo, editTodo } from './modules/crud.js';
 
-const list = document.querySelector('.list-item');
-
-const tasks = [
-  {
-    index: 0,
-    description: 'Do sport',
-    completed: true,
-  },
-  {
-    index: 1,
-    description: 'Do project in time',
-    completed: true,
-  },
-  {
-    index: 2,
-    description: 'Coding challenges',
-    completed: true,
-  },
-];
-
-const render = (task) => {
-  const div = document.createElement('div');
-  div.innerHTML = `
-    <h3>
-        <input type="checkbox">
-            ${task.description}
-    </h3>
-        <div>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-        </div>
-    `;
-  div.classList.add('list');
-  list.appendChild(div);
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  tasks.sort((a, b) => a.index - b.index)
-    .map((item) => render(item));
+Todo.renderToDo();
+addItems.addEventListener('submit', (e) => {
+  e.preventDefault();
+  Todo.saveTodo();
+  Todo.renderToDo();
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 });
+lists.onclick = (e) => {
+  const { target } = e;
+  const parentEle = target.parentNode;
+  const item = parentEle;
+  if (parentEle.className !== 'item') return;
+  const targetId = Number(item.id);
+  const { action } = target.dataset;
+
+  if (action === 'delete' && deleteToDo(targetId)) ;
+  if (action === 'edit' && editTodo(targetId)) ;
+};
+Todo.renderToDo();

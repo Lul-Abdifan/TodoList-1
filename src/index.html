@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- https://cdnjs.com/libraries/font-awesome -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/LATEST-VERSION">
-    <title>Todo list</title>
+<script
+src="https://kit.fontawesome.com/3ec9f83423.js"
+crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<title>Todo list</title>
 </head>
 <body>
     <div class="list-container">
         <header>
           <h1 class="heading">Today's To Do</h1>
-          <i class="fa-solid fa-rotate"></i>
+          <i class="bi bi-arrow-repeat" font="700"></i>
         </header>
-        <form action="" class="addItems">
-          <input type="text" name="task" class="to-do" placeholder="Add to your list...">
+        <form action="" class="addItems" id="addItem">
+          <input type="text" name="task" class="to-do task-input" id="to-dos" placeholder="Add to your list...">
           <button type="submit" class="addTask">
-            <i class="fa-solid fa-arrow-turn-down"></i>
+            <i class="fa fa-arrow-down"></i> 
+            
+               
           </button>
         </form>
         <div class="list-item">
+     
+          </div>
+
+     
+    </div>
          
         </div>
         <button type="submit" class="clearTask">Clear all completed</button>
       </div>
+      <script type="module" src="index.js"></script>
     
 </body>
 </html>
