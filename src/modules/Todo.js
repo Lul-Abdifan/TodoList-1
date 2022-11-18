@@ -1,14 +1,12 @@
-import { lists, addItems, inputValue } from './variables.js';
+import { lists, inputValue } from './variables.js';
 
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 export default class Todo {
-  // constructor(inputValue,checked,index)
-  // {
-  //   this.inputValue=inputValue;
-  //   this.index=index;
-  //   this.checked=checked;
-
-  // }
+  constructor(inputValue, checked, index) {
+    this.inputValue = inputValue;
+    this.index = index;
+    this.checked = checked;
+  }
 
 static saveTodo =() => {
   const task = {
@@ -23,7 +21,7 @@ static saveTodo =() => {
 static renderToDo() {
   lists.innerHTML = '';
   tasks.forEach((task, index) => {
-    lists.innerHTML += `<div class="item" id=${task.index}>
+    lists.innerHTML += `<div class="item" id=${index}>
     <i class="bi ${task.checked ? 'bi-check-circle-fill' : 'bi-check-circle'} " data-action='check'></i>
    
     <p data-action='edit'id="description">${task.description}</p>

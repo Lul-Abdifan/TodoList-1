@@ -11,17 +11,7 @@ addItems.addEventListener('submit', (e) => {
   Todo.renderToDo();
   localStorage.setItem('tasks', JSON.stringify(tasks));
 });
-lists.onclick = (e) => {
-  const { target } = e;
-  const parentEle = target.parentNode;
-  const item = parentEle;
-  if (parentEle.className !== 'item') return;
-  const targetId = Number(item.id);
-  const { action } = target.dataset;
 
-  npxaction === 'delete' && deleteToDo(targetId);
-  action === 'edit' && editTodo(targetId);
-};
 function deleteToDo(targetId) {
   tasks.splice(targetId, 1);
   tasks.forEach((todo, index) => {
@@ -35,4 +25,18 @@ function editTodo(targetId) {
   inputValue.value = tasks[targetId].description;
   deleteToDo(targetId);
 }
+lists.onclick = (e) => {
+  const { target } = e;
+  const parentEle = target.parentNode;
+  const item = parentEle;
+  if (parentEle.className !== 'item') return;
+  const targetId = Number(item.id);
+  const { action } = target.dataset;
+
+  // action === 'delete' && deleteToDo(targetId);
+  // action === 'edit' && editTodo(targetId);
+
+  if (action === 'delete' && deleteToDo(targetId)) ;
+  if (action === 'edit' && editTodo(targetId)) ;
+};
 Todo.renderToDo();
