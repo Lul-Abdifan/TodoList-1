@@ -1,6 +1,7 @@
 import { lists, inputValue } from './variables.js';
 
-const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+let editId = -1;
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 export default class Todo {
   constructor(inputValue, checked, index) {
     this.inputValue = inputValue;
@@ -9,14 +10,36 @@ export default class Todo {
   }
 
 static saveTodo =() => {
-  const task = {
-    description: inputValue.value,
-    index: tasks.length + 1,
-    checked: false,
-  };
-  tasks.push(task);
-  inputValue.value = '';
-}
+
+    const task = {
+      description: inputValue.value,
+      index: tasks.length + 1,
+      checked: false,
+    };
+    tasks.push(task);
+    inputValue.value = '';
+  } 
+  
+
+// static saveTodo =() => {
+//   if (editId < 0) {
+//   // update the edit todo
+//   tasks = tasks.map((todo, index) => ({
+//       ...todo,
+//       description: index === editId ? inputValue.value : todo.description,
+//     }));
+
+//     editId = -1;
+//   // } else {
+//   //   tasks.push({
+//   //     index: tasks.length + 1,
+//   //     description: inputValue.value,
+//   //     checked: false,
+//   //   });
+//   // }
+//   }
+
+
 
 static renderToDo() {
   lists.innerHTML = '';
@@ -34,4 +57,5 @@ static renderToDo() {
   });
 }
 }
-export { tasks };
+
+export { tasks, editId };
